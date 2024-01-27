@@ -5,6 +5,8 @@ services:
     build:
      context: .
      dockerfile: ./build/Dockerfile
+     target: base
+    command: ["npm", "run", "dev"]
     init: true
     volumes:
       - type: bind
