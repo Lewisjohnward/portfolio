@@ -37,4 +37,5 @@ jobs:
           script: |
                 docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_TOKEN }} &&
                 docker ps -aq | xargs docker stop | xargs docker rm &&
+                docker image rmi $(docker images -q) &&
                 docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest
