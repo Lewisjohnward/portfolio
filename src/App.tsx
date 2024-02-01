@@ -165,7 +165,7 @@ function Header() {
 
 function App() {
   return (
-    <body className="h-[100dvh] flex flex-col pt-0 md:pt-0 space-y-0 max-w-6xl m-auto">
+    <body className="h-[100dvh] flex flex-col max-w-6xl m-auto">
       <Header />
       <div className="px-2 md:px-0 md:overflow-hidden flex-grow flex flex-col md:flex-row">
         <div className="flex-grow basis-0 flex flex-col py-4 space-y-4">
