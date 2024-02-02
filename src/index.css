@@ -4,13 +4,10 @@
 
 * {
   color: white;
-}
-
-* {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background: #1e293b;
 }
 
