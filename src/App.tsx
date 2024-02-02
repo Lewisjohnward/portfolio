@@ -184,7 +184,7 @@ function Name() {
 
 function App() {
   return (
-    <div className="text-sm md:text-base h-[100dvh] flex flex-col max-w-6xl m-auto px-4 py-2">
+    <div className="text-sm md:text-base h-[100dvh] flex flex-col max-w-6xl m-auto px-4 md:py-4">
       {/* <Header /> */}
       <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
         <Name />
