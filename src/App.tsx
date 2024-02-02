@@ -35,6 +35,7 @@ function Scroll() {
   const testRef = useRef<HTMLDivElement | null>(null);
 
   const handleScroll = () => {
+    console.log("hello");
     if (testRef.current === null) return;
     const scrollPos = testRef.current.scrollTop;
     const firstElementTop = testRef.current.children[0].offsetTop;
@@ -52,11 +53,11 @@ function Scroll() {
   const handleClick = (e) => {
     console.log(e.target.id);
     setId(e.target.id);
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   return (
-    <div className="flex-grow basis-0 md:flex flex-col overflow-hidden">
+    <div className="flex-grow basis-0 flex flex-col overflow-hidden">
       <div className="flex justify-between gap-2 md:gap-4 lg:gap-8 py-4 text-white">
         {navObjects.map((nav) => (
           <a
