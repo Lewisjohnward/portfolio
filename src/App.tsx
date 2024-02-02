@@ -27,7 +27,7 @@ const navObjects = [
     linkText: "Experience",
     text: "experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience experience",
   },
-  { id: "projects", linkText: "Projects", text: "projects" },
+  { id: "projects", linkText: "Projects", text: "projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects projects" },
 ];
 
 function Scroll() {
@@ -75,7 +75,7 @@ function Scroll() {
       </div>
       <div
         onScroll={handleScroll}
-        className="h-full pb-[600px] overflow-scroll no-scrollbar space-y-10"
+        className="overflow-scroll flex-grow no-scrollbar space-y-10"
         ref={testRef}
       >
         {navObjects.map((nav) => (
@@ -117,7 +117,7 @@ function Scroll() {
 
 function Header() {
   return (
-    <div className="flex justify-between items-center py-2 px-[1px]">
+    <div className="flex justify-between items-center md:py-2 px-[1px]">
       <div className="w-8 h-8 rounded-full bg-white" />
       <div className="flex items-center gap-8">
         <a href="#" className="hover:opacity-40 text-4xl">
@@ -160,9 +160,9 @@ function Header() {
 // }
 function Name() {
   return (
-    <div className="md:flex-grow basis-0 flex flex-col space-y-4">
+    <div className="md:flex-grow basis-0 flex flex-col space-y-2">
       <div>
-        <h1 className="text-6xl leading-none">Lewis Ward</h1>
+        <h1 className="text-4xl md:text-6xl leading-none">Lewis Ward</h1>
         <h2 className="px-2 text-sm text-white/50">
           Lead Engineer at my bedroom
         </h2>
@@ -180,9 +180,9 @@ function Name() {
 
 function App() {
   return (
-    <div className="h-[100dvh] flex flex-col max-w-6xl m-auto px-4 py-2">
+    <div className="text-sm h-[100dvh] flex flex-col max-w-6xl m-auto px-4 py-2">
       <Header />
-      <div className="px-[1px] mt-6 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
+      <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
         <Name />
         <Scroll />
       </div>
