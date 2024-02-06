@@ -59,7 +59,8 @@ function Scroll() {
   };
 
   function handleClick(e: SyntheticEvent<HTMLAnchorElement>) {
-    console.log(e);
+    return e
+    // console.log(e);
     // console.log(e.target.id);
     // setId(e.target.id);
     // e.preventDefault();
