@@ -1,64 +1,55 @@
-import React from 'react'
-
 function TechnicalSkills() {
   return (
-          <>
-                  <p>
-                            Technical Wizardry: My coding journey began with a mission to bring my
-                                      ideas to life on the web. I've become adept at a variety of languages
-                                                and technologies, with a strong foundation in HTML, CSS, and
-                                                          JavaScript. Building on this base, I've delved into the intricacies of
-                                                                    popular frameworks such as React for dynamic front-end development and
-                                                                              Node.js for scalable back-end solutions.
-                                                                                      </p>
+    <>
+      <div>
+        <p className="text-lg font-bold">Frontend</p>
+        <div className="flex flex-wrap gap-2">
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Accessibility</p>
+          <p>Semantic HTML</p>
+          <p>Javascript</p>
+          <p>Typescript</p>
+          <p>React</p>
+          <p>NextJS</p>
+          <p>MongoDB</p>
+          <p>TypeScript</p>
+          <p>Express</p>
+          <p>TailwindCSS</p>
+          <p>Styled Components</p>
+          <p>d3.js</p>
+          <p>Zustand</p>
+          <p>Redux</p>
+        </div>
+      </div>
 
-                                                                                              <p>
-                                                                                                        Full-Stack Prowess: Being a firm believer in the power of full-stack
-                                                                                                                  development, I've seamlessly integrated front-end and back-end
-                                                                                                                            technologies to create cohesive and efficient web applications.
-                                                                                                                                      Whether it's designing pixel-perfect user interfaces or architecting
-                                                                                                                                                robust server-side solutions, I take pride in delivering end-to-end
-                                                                                                                                                          solutions that stand out.
-                                                                                                                                                                  </p>
+      <p className="text-lg font-bold">Backend</p>
+      <div className="flex flex-wrap gap-2">
+        <p>NodeJS</p>
+        <p>Express</p>
+        <p>MongoDB</p>
+        <p>PostgreSQL</p>
+        <p>Redis</p>
+      </div>
 
-                                                                                                                                                                          <p>
-                                                                                                                                                                                    Responsive Design Guru: Creating websites that adapt gracefully to
-                                                                                                                                                                                              various devices is my forte. I prioritize responsive design
-                                                                                                                                                                                                        principles, ensuring that users have a seamless experience across
-                                                                                                                                                                                                                  desktops, tablets, and smartphones.
-                                                                                                                                                                                                                          </p>
-
-                                                                                                                                                                                                                                  <p>
-                                                                                                                                                                                                                                            Version Control Maestro: Git and GitHub are my trusted allies in
-                                                                                                                                                                                                                                                      managing code versions and collaborating seamlessly with fellow
-                                                                                                                                                                                                                                                                developers. I appreciate the importance of a well-organized version
-                                                                                                                                                                                                                                                                          control system in maintaining code integrity and facilitating
-                                                                                                                                                                                                                                                                                    collaborative projects.
-                                                                                                                                                                                                                                                                                            </p>
-
-                                                                                                                                                                                                                                                                                                    <p>
-                                                                                                                                                                                                                                                                                                              Continuous Learner: The tech landscape evolves at a rapid pace, and I
-                                                                                                                                                                                                                                                                                                                        thrive on staying ahead of the curve. Whether it's adopting the latest
-                                                                                                                                                                                                                                                                                                                                  JavaScript features or exploring emerging tools and libraries, I
-                                                                                                                                                                                                                                                                                                                                            embrace continuous learning as a cornerstone of my professional
-                                                                                                                                                                                                                                                                                                                                                      growth.
-                                                                                                                                                                                                                                                                                                                                                              </p>
-
-                                                                                                                                                                                                                                                                                                                                                                      <p>
-                                                                                                                                                                                                                                                                                                                                                                                Problem-Solving Enthusiast: I approach coding challenges with a
-                                                                                                                                                                                                                                                                                                                                                                                          problem-solving mindset. Debugging and troubleshooting are not just
-                                                                                                                                                                                                                                                                                                                                                                                                    tasks; they're opportunities to enhance my skills and uncover
-                                                                                                                                                                                                                                                                                                                                                                                                              innovative solutions.
-                                                                                                                                                                                                                                                                                                                                                                                                                      </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                              <p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                        Passionate Collaborator: I enjoy collaborating with diverse teams,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  bringing unique perspectives together to create impactful projects.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            Communication and teamwork are essential components of my approach to
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      building successful digital solutions.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </>
-
-  )
+      <p className="text-lg font-bold ">Tools</p>
+      <div className="flex flex-wrap gap-2">
+        <p>Linux</p>
+        <p>Bash</p>
+        <p>Shell</p>
+        <p>Git</p>
+        <p>Github Actions</p>
+        <p>Gitlab CI</p>
+        <p>Jenkins</p>
+        <p>Docker</p>
+        <p>Docker Swarm</p>
+        <p>Kubernetes</p>
+        <p>Ansible</p>
+        <p>Nginx</p>
+        <p>AWS</p>
+      </div>
+    </>
+  );
 }
 
-export default TechnicalSkills
+export default TechnicalSkills;
