@@ -2,10 +2,6 @@ import { Link } from "react-router-dom";
 import { projects } from "../misc/projects";
 
 export function Projects() {
-  for (const project in projects) {
-    console.log(project);
-  }
-
   return (
     <div className="space-y-4">
       <p>
