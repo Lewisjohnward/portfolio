@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { UIEvent, SyntheticEvent, useState } from "react";
 import {
   TiDocumentText,
   FaLinkedin,
@@ -40,16 +40,17 @@ const navObjects = [
 
 function Scroll() {
   const [id, setId] = useState(navObjects[0].id);
-  const testRef = useRef<HTMLDivElement | null>(null);
 
-  const handleScroll = () => {
-    if (testRef.current === null) return;
-    const scrollPos = testRef.current.scrollTop;
-    const firstElementTop = testRef.current.children[0].offsetTop;
-    for (const child of testRef.current.children) {
+  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+    if (e.currentTarget == null) return;
+    const scrollPos = e.currentTarget.scrollTop;
+    const firstElementTop = (e.currentTarget.children[0] as HTMLElement)
+      .offsetTop;
+    for (const child of e.currentTarget.children) {
+      const offsetTop = (child as HTMLElement).offsetTop;
       if (
-        scrollPos >= child.offsetTop - firstElementTop &&
-        scrollPos < child.clientHeight + child.offsetTop - firstElementTop
+        scrollPos >= offsetTop - firstElementTop &&
+        scrollPos < child.clientHeight + offsetTop - firstElementTop
       ) {
         setId(child.id);
         return;
@@ -57,9 +58,10 @@ function Scroll() {
     }
   };
 
-  function handleClick(e) {
-    console.log(e.target.id);
-    setId(e.target.id);
+  function handleClick(e: SyntheticEvent<HTMLAnchorElement>) {
+    console.log(e);
+    // console.log(e.target.id);
+    // setId(e.target.id);
     // e.preventDefault();
   }
 
@@ -83,7 +85,7 @@ function Scroll() {
       <div
         onScroll={handleScroll}
         className="overflow-scroll flex-grow no-scrollbar space-y-10"
-        ref={testRef}
+        // ref={testRef}
       >
         {navObjects.map((nav) => (
           <div key={nav.id} id={nav.id} className="space-y-4">
