@@ -12,6 +12,13 @@ export const projects = {
     name: "Tabata Timer",
     image: "tabata.png",
     details: "An online tabata timer",
-    link: ""
+    link: "",
+  },
+  wetherspoonsprices: {
+    id: "wetherspoonsprices",
+    name: "Wetherspoons Price Checker",
+    image: "tabata.png",
+    details: "A frontend over Wetherpoon's API to check and compare prices",
+    link: "",
   },
 };
