@@ -29,11 +29,6 @@ export function About() {
         that have a positive impact. My goal is not only to write efficient code
         but also to create digital experiences that resonate with users.
       </p>
-      <p>
-        When I'm not immersed in lines of code, you can find me exploring new
-        technologies, attending meetups, or simply enjoying a good cup of coffee
-        while brainstorming my next big project.,
-      </p>
     </>
   );
 }
