@@ -139,7 +139,7 @@ function Header() {
         <a
           href="https://www.linkedin.com"
           className="opacity-40 hover:opacity-100"
-          target="_blank"
+          target="https://www.linkedin.com/in/lewis-ward-42b757288/"
         >
           <FaLinkedin />
         </a>
@@ -152,17 +152,16 @@ function Name() {
     <div className="md:flex-grow basis-0 flex flex-col space-y-2">
       <div>
         <h1 className="text-4xl md:text-6xl leading-none">Lewis Ward</h1>
-        <h2 className="px-2 text-sm text-white/50">
-          Lead Engineer at my bedroom
-        </h2>
+        <h2 className="px-2 text-sm text-white/50">Full stack engineer</h2>
       </div>
       <Header />
       <p className="text-white/50">
-        I build pixel-perfect, engaging, and accessible digital experiences I
-        build pixel-perfect, engaging, and accessible digital experiences I
-        build pixel-perfect, engaging, and accessible digital experiences I
-        build pixel-perfect, engaging, and accessible digital experiences I
-        build pixel-perfect, engaging, and accessible digital experiences
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies
+        aliquet eros, molestie mollis sapien facilisis nec. Aliquam erat
+        volutpat. Vivamus maximus suscipit tellus in feugiat. Maecenas vel
+        turpis consequat, ornare orci nec, porttitor ligula. Cras rhoncus non
+        est ac elementum. Donec leo urna, vehicula in magna blandit, eleifend
+        posuere
       </p>
     </div>
   );
@@ -170,9 +169,9 @@ function Name() {
 
 export function Home() {
   return (
-      <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
-        <Name />
-        <Scroll />
-      </div>
+    <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
+      <Name />
+      <Scroll />
+    </div>
   );
 }
