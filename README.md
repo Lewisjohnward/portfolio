@@ -1,14 +1,22 @@
-# portfolio
+# Portfolio
 
-## Develop
+Portfolio website displaying a selection of projects that I have created.
 
-To develop run
+## Getting Started
+
+These instructions witll get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/)
+
+### Running
 
 ```
 make dev
 ```
 
-the server listens on port 5001
+The server listens on port 5001
 
 To stop the development server run
 
