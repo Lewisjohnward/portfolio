@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio website displaying a selection of projects that I have created.
+Portfolio website displaying a selection of projects.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ These instructions witll get a copy of the project up and running on your local 
 
 ### Prerequisites
 
-- [Docker](https://www.docker.com/)
+[Docker](https://www.docker.com/)
 
 ### Running
 
