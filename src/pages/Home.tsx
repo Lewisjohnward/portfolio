@@ -59,7 +59,7 @@ function Scroll() {
   };
 
   function handleClick(e: SyntheticEvent<HTMLAnchorElement>) {
-    return e
+    return e;
     // console.log(e);
     // console.log(e.target.id);
     // setId(e.target.id);
@@ -85,7 +85,7 @@ function Scroll() {
       </div>
       <div
         onScroll={handleScroll}
-        className="overflow-scroll flex-grow no-scrollbar space-y-10"
+        className="overflow-scroll flex-grow no-scrollbar space-y-5"
         // ref={testRef}
       >
         {navObjects.map((nav) => (
@@ -152,27 +152,19 @@ function Header() {
 }
 function Name() {
   return (
-    <div className="md:flex-grow basis-0 flex flex-col space-y-2">
+    <div className="basis-0 flex flex-col space-y-2">
       <div>
         <h1 className="text-4xl md:text-6xl leading-none">Lewis Ward</h1>
         <h2 className="px-2 text-sm text-white/50">Full stack engineer</h2>
       </div>
       <Header />
-      <p className="text-white/50">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies
-        aliquet eros, molestie mollis sapien facilisis nec. Aliquam erat
-        volutpat. Vivamus maximus suscipit tellus in feugiat. Maecenas vel
-        turpis consequat, ornare orci nec, porttitor ligula. Cras rhoncus non
-        est ac elementum. Donec leo urna, vehicula in magna blandit, eleifend
-        posuere
-      </p>
     </div>
   );
 }
 
 export function Home() {
   return (
-    <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col md:justify-start md:flex-row">
+    <div className="px-[1px] mt-3 md:mt-0 md:px-0 md:overflow-hidden flex-grow flex flex-col">
       <Name />
       <Scroll />
     </div>
