@@ -36,10 +36,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
                 echo "Logging into DockerHub"
-                echo "{{ secrets.SUDO_PW }}" | sudo -S docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_TOKEN }}
+                docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_TOKEN }}
                 echo "Removing currently running Docker containers"
-                echo "{{ secrets.SUDO_PW }}" | sudo -S docker ps -aq | xargs docker stop | xargs docker rm
+                docker ps -aq | xargs docker stop | xargs docker rm
                 echo "Deleting images"
-                echo "{{ secrets.SUDO_PW }}" | sudo -S docker image rmi $(docker images -q)
+                docker image rmi $(docker images -q)
                 echo "Starting new container"
-                echo "{{ secrets.SUDO_PW }}" | sudo -S docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest
+                docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest
