@@ -12,14 +12,20 @@ These instructions witll get a copy of the project up and running on your local 
 
 ### Running
 
-```
-make dev
-```
+To start The server listens on port 5001
 
-The server listens on port 5001
+```
+make development
+```
 
 To stop the development server run
 
 ```
-make remove
+make clean-development
+```
+
+To build production container
+
+```
+build-production
 ```

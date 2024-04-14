@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          file: build/Dockerfile
+          file: build/production/Dockerfile
           tags: ${{ secrets.DOCKER_USER }}/app:latest
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
@@ -35,7 +35,11 @@ jobs:
           username: ${{ secrets.HOSTNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-                docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_TOKEN }} &&
-                docker ps -aq | xargs docker stop | xargs docker rm &&
-                docker image rmi $(docker images -q) &&
-                docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest
+                echo "Logging into DockerHub"
+                echo "{{ secrets.SUDO_PW }}" | sudo -S docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_TOKEN }}
+                echo "Removing currently running Docker containers"
+                echo "{{ secrets.SUDO_PW }}" | sudo -S docker ps -aq | xargs docker stop | xargs docker rm
+                echo "Deleting images"
+                echo "{{ secrets.SUDO_PW }}" | sudo -S docker image rmi $(docker images -q)
+                echo "Starting new container"
+                echo "{{ secrets.SUDO_PW }}" | sudo -S docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest

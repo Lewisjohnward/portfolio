@@ -1,21 +1,18 @@
-version: "3.9"
 services:
   vite-dev:
     image: portfolio-dev
     build:
-     context: .
-     dockerfile: ./build/Dockerfile
-     target: base
-    command: ["npm", "run", "dev"]
+     context: ../../
+     dockerfile: build/development/Dockerfile
     init: true
     volumes:
       - type: bind
-        source: ./
+        source: ../../
         target: /app/
       - type: volume
         target: /app/node_modules/
       - type: bind
-        source: vite.config.ts
+        source: ../../vite.config.ts
         target: /app/vite.config.ts
     networks:
       - frontend
