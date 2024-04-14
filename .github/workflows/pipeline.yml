@@ -42,4 +42,5 @@ jobs:
                 echo "Deleting images"
                 docker image rmi $(docker images -q)
                 echo "Starting new container"
-                docker run -d -p 80:8080 ${{ secrets.DOCKER_USER }}/app:latest
+                cd app
+                docker compose up -d
